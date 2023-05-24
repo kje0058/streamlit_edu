@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 def main():
-    st.title('앱 대시보드')
+    st.title('내 앱 대시보드')
 
     df=pd.read_csv('data\iris.csv')
     # print(df)

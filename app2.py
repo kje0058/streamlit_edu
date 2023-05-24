@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title('앱 대시보드')
+    st.title('내 앱 대시보드')
     
     name='홍길동'
 

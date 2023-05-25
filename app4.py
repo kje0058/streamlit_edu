@@ -16,8 +16,7 @@ def main():
 
     if st.button('대문자') :
         st.text(name.upper())
-    
-    elif st.button('소문자') : 
+    if st.button('소문자') : 
         st.text(name.lower())
     
     st.dataframe(df)

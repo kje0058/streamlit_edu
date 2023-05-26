@@ -7,9 +7,11 @@ def main():
     df = pd.read_csv('data/iris.csv')
 
     # 버튼
+    st.text('button 예제1')
     if st.button('데이터 보기') : # 버튼을 누르면 True
         st.dataframe(df)
 
+    st.text('button 예제2')
     name='Mike'
     # 대문자 버튼을 누르면, 대문자로 표시하고
     # 소문자 버튼을 누르면, 소문자로 나오게 하자
@@ -18,7 +20,8 @@ def main():
         st.text(name.upper())
     if st.button('소문자') : 
         st.text(name.lower())
-    
+
+    st.text('radio 예제1')    
     st.dataframe(df)
     # petal_length 컬럼을 정렬하고 싶다.
     # 오름차순 정렬, 내림차순 정렬 두가지 옵션을 선택토록
@@ -31,12 +34,13 @@ def main():
         st.dataframe(df.sort_values('petal_length',ascending=False))
 
     # 체크박스 : 설정과 해제
-
+    st.text('checkbox')
     if st.checkbox('데이터프레임 보이기') :
         st.dataframe(df.head(3))
     else:
         st.write('데이터가 없습니다.')
 
+    st.text('selectbox')
     # 여러개 중에 1개를 선택
     language=['선택', 'Python','Java','C','GO','PHP']
 
@@ -61,7 +65,7 @@ def main():
     # 유저가 컬럼을 선택하면
     # 해당 컬럼만 가져와서 데이터프레임을 보여주고 싶다.
     
-
+    st.text('multiselect')
     column_list = st.multiselect('컬럼을 선택하세요', df.columns) # 리스트로 리턴
     # 선택한 컬럼 데이터 보여주기!
     st.dataframe(df[column_list])
